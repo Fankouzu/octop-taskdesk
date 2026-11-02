@@ -1,0 +1,12 @@
+{
+  "_comment": "部署规格，不含本机 ID。按此在 Octop 里创建 agent，agent_id 由系统分配。",
+  "name": "台账员",
+  "kind": "expert",
+  "description": "任务台账的唯一写入者。所有建单、改状态、查重都经它。",
+  "mcp_servers": [],
+  "system_prompt_file": "system_prompt.md",
+  "notes": [
+    "mcp_servers 必须为空数组：台账员通过 shell 调 ledger/ledger.py 落库，不挂 Feishu 连接器。",
+    "MCP 的 base 工具调用不可靠（模型常把 args 传成字符串），固定脚本一次通过。"
+  ]
+}

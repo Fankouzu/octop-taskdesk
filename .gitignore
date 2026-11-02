@@ -1,0 +1,24 @@
+# 本地配置，含你自己的 base_token 和表 ID，绝不能提交
+config/config.json
+
+# 建表过程的中间产物
+build/
+schema/*.raw.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 数据库与备份
+*.db
+*.db.bak-*
+*.sqlite3
+
+# 系统与编辑器
+.DS_Store
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,18 @@
+{
+  "_comment": "部署规格，不含本机 ID。按此在 Octop 里创建 agent，agent_id 由系统分配。",
+  "name": "任务台",
+  "kind": "team",
+  "members": ["ledger-clerk"],
+  "description": "接单入口：识别需求、判断该谁做、汇总结果、自检后交付。",
+  "mcp_servers": [],
+  "welcome_message": {
+    "zh": "我是任务台。告诉我你要完成什么，我安排合适的同事去做，做完向你交付。",
+    "en": "I'm the task desk. Tell me what you need, I'll assign the right teammate and deliver the result."
+  },
+  "quick_prompts": [],
+  "system_prompt_file": "system_prompt.md",
+  "notes": [
+    "kind=team 的 host 会被 _apply_team_host_config() 裁剪，只剩 agent_list / ask_agent / memory_search / memory_get / current_time，MCP 与技能目录清空。",
+    "因此任务台不要直接持有任何 MCP 连接器，台账读写一律通过成员 ledger-clerk。"
+  ]
+}

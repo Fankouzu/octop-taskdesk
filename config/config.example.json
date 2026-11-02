@@ -1,0 +1,13 @@
+{
+  "_comment": "复制为 config/config.json 后填写。所有值也可用 TASKDESK_* 环境变量覆盖，环境变量优先。",
+  "base_token": "填你自己的多维表格 base_token",
+  "template_base_token": "可选：用来导出 schema 的模板表 base_token",
+  "lark_cli": "/data/.local/bin/lark-cli",
+  "lark_config_dir": "/data/.octop/connector-cli/feishu-cli/你的配置目录",
+  "identity": "bot",
+  "tables": {
+    "demand": "需求表 table_id",
+    "task": "开发任务表 table_id",
+    "project": "项目表 table_id"
+  }
+}

@@ -1,0 +1,2406 @@
+{
+ "tables": [
+  {
+   "name": "项目表",
+   "src_id": "t01",
+   "fields": [
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f003",
+     "id": "t01f001",
+     "link_table": "t08",
+     "name": "开发任务表 副本",
+     "type": "link"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t05f006",
+     "id": "t01f002",
+     "link_table": "t05",
+     "name": "版本迭代",
+     "type": "link"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f003",
+     "id": "t01f003",
+     "link_table": "t02",
+     "name": "任务明细",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t01f004",
+     "name": "项目描述",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t01f005",
+     "name": "项目需求表",
+     "style": {
+      "type": "url"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t01f006",
+     "multiple": false,
+     "name": "UI负责人",
+     "type": "user"
+    },
+    {
+     "default_value": null,
+     "id": "t01f007",
+     "name": "项目版本迭代表",
+     "style": {
+      "type": "url"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t01f008",
+     "name": "项目名称",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t01f009",
+     "name": "创建日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "default_value": null,
+     "id": "t01f010",
+     "multiple": false,
+     "name": "产品经理",
+     "type": "user"
+    },
+    {
+     "default_value": null,
+     "id": "t01f011",
+     "name": "项目开发任务表",
+     "style": {
+      "type": "url"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t01f012",
+     "multiple": false,
+     "name": "项目负责人 2",
+     "type": "user"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t03f008",
+     "id": "t01f013",
+     "link_table": "t03",
+     "name": "需求明细",
+     "type": "link"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f003",
+     "id": "t01f014",
+     "link_table": "t10",
+     "name": "开发任务表 10月15日",
+     "type": "link"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f003",
+     "id": "t01f015",
+     "link_table": "t09",
+     "name": "10月12日开发任务表 ",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t01f016",
+     "multiple": false,
+     "name": "项目状态",
+     "options": [
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "未开始"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "进行中"
+      },
+      {
+       "hue": "Wathet",
+       "lightness": "Lighter",
+       "name": "已结束"
+      }
+     ],
+     "type": "select"
+    }
+   ],
+   "views": [
+    {
+     "name": "Grid",
+     "type": "grid"
+    },
+    {
+     "name": "新建项目",
+     "type": "form"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "开发任务表",
+   "src_id": "t02",
+   "fields": [
+    {
+     "default_value": null,
+     "id": "t10f008",
+     "name": "任务详细说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": false,
+     "id": "t10f005",
+     "link_table": "t02",
+     "name": "父记录 2",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f013",
+     "name": "当日进度",
+     "style": {
+      "color": "Blue",
+      "percentage": true,
+      "type": "progress"
+     },
+     "type": "number"
+    },
+    {
+     "bidirectional": false,
+     "id": "t10f012",
+     "link_table": "t02",
+     "name": "父记录",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f002",
+     "multiple": false,
+     "name": "任务状态",
+     "options": [
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "未开始"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "开发中"
+      },
+      {
+       "hue": "Wathet",
+       "lightness": "Lighter",
+       "name": "联调中"
+      },
+      {
+       "hue": "Yellow",
+       "lightness": "Lighter",
+       "name": "待验收"
+      },
+      {
+       "hue": "Turquoise",
+       "lightness": "Lighter",
+       "name": "已完成"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t10f011",
+     "multiple": false,
+     "name": "负责人",
+     "type": "user"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t01f003",
+     "id": "t10f003",
+     "link_table": "t01",
+     "name": "关联项目",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f006",
+     "name": "开始日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "description": "上传当天写完任务后的产出文件和图片（代码截图、改动说明等），供合并代码的人查看我这边更新了什么，确保 AI 合并时没有问题。",
+     "id": "t10f009",
+     "name": "今日产出文件",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "default_value": null,
+     "id": "t10f004",
+     "name": "今日进度说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t10f014",
+     "name": "任务名称",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t03f007",
+     "id": "t10f010",
+     "link_table": "t03",
+     "name": "关联需求",
+     "type": "link"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t05f005",
+     "id": "t10f007",
+     "link_table": "t05",
+     "name": "所属版本",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f001",
+     "name": "截止日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    }
+   ],
+   "views": [
+    {
+     "name": "Grid",
+     "type": "grid"
+    },
+    {
+     "name": "未完成任务（按负责人）",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "需求表",
+   "src_id": "t03",
+   "fields": [
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f010",
+     "id": "t03f001",
+     "link_table": "t10",
+     "name": "开发任务表 10月15日",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t03f002",
+     "name": "提交日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "bidirectional": false,
+     "id": "t03f003",
+     "link_table": "t03",
+     "name": "父记录",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t03f004",
+     "name": "所属功能",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t03f005",
+     "name": "需求描述",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f010",
+     "id": "t03f006",
+     "link_table": "t08",
+     "name": "开发任务表 副本",
+     "type": "link"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f010",
+     "id": "t03f007",
+     "link_table": "t02",
+     "name": "关联任务",
+     "type": "link"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t01f013",
+     "id": "t03f008",
+     "link_table": "t01",
+     "name": "所属项目",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t03f009",
+     "multiple": false,
+     "name": "需求状态",
+     "options": [
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "待评审"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "已确认"
+      },
+      {
+       "hue": "Wathet",
+       "lightness": "Lighter",
+       "name": "开发中"
+      },
+      {
+       "hue": "Yellow",
+       "lightness": "Lighter",
+       "name": "已完成"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f010",
+     "id": "t03f010",
+     "link_table": "t09",
+     "name": "10月12日开发任务表 ",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t03f011",
+     "name": "所属版本",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t03f012",
+     "multiple": false,
+     "name": "优先级",
+     "options": [
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "P0"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "P1"
+      },
+      {
+       "hue": "Wathet",
+       "lightness": "Lighter",
+       "name": "P2"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t03f013",
+     "name": "需求名称",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    }
+   ],
+   "views": [
+    {
+     "name": "Grid",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "每日问题跟踪表",
+   "src_id": "t04",
+   "fields": [
+    {
+     "id": "t07f012",
+     "name": "更新时间",
+     "style": {
+      "format": "yyyy-MM-dd HH:mm"
+     },
+     "type": "updated_at"
+    },
+    {
+     "default_value": null,
+     "id": "t07f005",
+     "name": "问题 副本 2",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t07f015",
+     "multiple": false,
+     "name": "优先级",
+     "options": [
+      {
+       "hue": "Red",
+       "lightness": "Lighter",
+       "name": "紧急"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "高"
+      },
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "中"
+      },
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "低"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t04f004",
+     "name": "所属功能",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": false,
+     "id": "t07f009",
+     "link_table": "t04",
+     "name": "父记录 2",
+     "type": "link"
+    },
+    {
+     "bidirectional": false,
+     "id": "t07f003",
+     "link_table": "t01",
+     "name": "所属项目",
+     "type": "link"
+    },
+    {
+     "id": "t04f007",
+     "name": "问题快照",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "id": "t07f004",
+     "name": "创建人",
+     "type": "created_by"
+    },
+    {
+     "default_value": null,
+     "id": "t07f007",
+     "name": "计划解决日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "default_value": null,
+     "id": "t07f011",
+     "name": "解决结果",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t07f006",
+     "name": "问题",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "id": "t07f014",
+     "name": "最新进展",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "default_value": {
+      "$slot": "record_created_time"
+     },
+     "id": "t07f008",
+     "name": "记录日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "default_value": null,
+     "id": "t07f016",
+     "name": "原文编号",
+     "style": {
+      "percentage": false,
+      "precision": 0,
+      "thousands_separator": false,
+      "type": "plain"
+     },
+     "type": "number"
+    },
+    {
+     "default_value": null,
+     "description": "选择实际处理此问题的人，便于手动提醒和跟踪进展。",
+     "id": "t07f002",
+     "multiple": false,
+     "name": "负责人",
+     "type": "user"
+    },
+    {
+     "default_value": [
+      "待确认"
+     ],
+     "id": "t07f013",
+     "multiple": false,
+     "name": "处理状态",
+     "options": [
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "待确认"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "待处理"
+      },
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "处理中"
+      },
+      {
+       "hue": "Purple",
+       "lightness": "Lighter",
+       "name": "待验收"
+      },
+      {
+       "hue": "Green",
+       "lightness": "Lighter",
+       "name": "已解决"
+      },
+      {
+       "hue": "Yellow",
+       "lightness": "Lighter",
+       "name": "暂缓"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t07f001",
+     "name": "来源文档",
+     "style": {
+      "type": "url"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t07f017",
+     "name": "问题 副本",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t07f010",
+     "name": "解决方案（开会录音0",
+     "style": {
+      "type": "url"
+     },
+     "type": "text"
+    }
+   ],
+   "views": [
+    {
+     "name": "表格",
+     "type": "grid"
+    },
+    {
+     "name": "表格 8",
+     "type": "grid"
+    },
+    {
+     "name": "未解决问题",
+     "type": "grid"
+    },
+    {
+     "name": "按负责人",
+     "type": "grid"
+    },
+    {
+     "name": "全部问题",
+     "type": "grid"
+    },
+    {
+     "name": "已解决问题",
+     "type": "grid"
+    },
+    {
+     "name": "按日期",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "版本迭代表",
+   "src_id": "t05",
+   "fields": [
+    {
+     "default_value": null,
+     "id": "t05f001",
+     "name": "迭代目标",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t05f002",
+     "multiple": false,
+     "name": "迭代状态",
+     "options": [
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "未开始"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "进行中"
+      },
+      {
+       "hue": "Wathet",
+       "lightness": "Lighter",
+       "name": "已发布"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t05f003",
+     "name": "所属功能",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t05f004",
+     "name": "需求文档",
+     "style": {
+      "type": "url"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f007",
+     "id": "t05f005",
+     "link_table": "t02",
+     "name": "版本任务",
+     "type": "link"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t01f002",
+     "id": "t05f006",
+     "link_table": "t01",
+     "name": "所属项目",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t05f007",
+     "name": "开始日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f007",
+     "id": "t05f008",
+     "link_table": "t08",
+     "name": "开发任务表 副本",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t05f009",
+     "name": "版本号",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f007",
+     "id": "t05f010",
+     "link_table": "t10",
+     "name": "开发任务表 10月15日",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t05f011",
+     "name": "结束日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t10f007",
+     "id": "t05f012",
+     "link_table": "t09",
+     "name": "10月12日开发任务表 ",
+     "type": "link"
+    }
+   ],
+   "views": [
+    {
+     "name": "Grid",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "10 月·13每日问题跟踪表",
+   "src_id": "t06",
+   "fields": [
+    {
+     "default_value": [
+      "待确认"
+     ],
+     "id": "t07f013",
+     "multiple": false,
+     "name": "处理状态",
+     "options": [
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "待确认"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "待处理"
+      },
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "处理中"
+      },
+      {
+       "hue": "Purple",
+       "lightness": "Lighter",
+       "name": "待验收"
+      },
+      {
+       "hue": "Green",
+       "lightness": "Lighter",
+       "name": "已解决"
+      },
+      {
+       "hue": "Yellow",
+       "lightness": "Lighter",
+       "name": "暂缓"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "id": "t07f014",
+     "name": "最新进展",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "default_value": null,
+     "id": "t07f001",
+     "name": "来源文档",
+     "style": {
+      "type": "url"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t07f007",
+     "name": "计划解决日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "id": "t07f004",
+     "name": "创建人",
+     "type": "created_by"
+    },
+    {
+     "default_value": null,
+     "description": "选择实际处理此问题的人，便于手动提醒和跟踪进展。",
+     "id": "t07f002",
+     "multiple": false,
+     "name": "负责人",
+     "type": "user"
+    },
+    {
+     "default_value": null,
+     "id": "t07f011",
+     "name": "解决结果",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": false,
+     "id": "t07f003",
+     "link_table": "t01",
+     "name": "所属项目",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t07f015",
+     "multiple": false,
+     "name": "优先级",
+     "options": [
+      {
+       "hue": "Red",
+       "lightness": "Lighter",
+       "name": "紧急"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "高"
+      },
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "中"
+      },
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "低"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": {
+      "$slot": "record_created_time"
+     },
+     "id": "t07f008",
+     "name": "记录日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "id": "t07f012",
+     "name": "更新时间",
+     "style": {
+      "format": "yyyy-MM-dd HH:mm"
+     },
+     "type": "updated_at"
+    },
+    {
+     "default_value": null,
+     "id": "t07f006",
+     "name": "问题",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t07f016",
+     "name": "原文编号",
+     "style": {
+      "percentage": false,
+      "precision": 0,
+      "thousands_separator": false,
+      "type": "plain"
+     },
+     "type": "number"
+    }
+   ],
+   "views": [
+    {
+     "name": "表格",
+     "type": "grid"
+    },
+    {
+     "name": "未解决问题",
+     "type": "grid"
+    },
+    {
+     "name": "按负责人",
+     "type": "grid"
+    },
+    {
+     "name": "全部问题",
+     "type": "grid"
+    },
+    {
+     "name": "已解决问题",
+     "type": "grid"
+    },
+    {
+     "name": "按日期",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "每日问题跟踪表 10月15日",
+   "src_id": "t07",
+   "fields": [
+    {
+     "default_value": null,
+     "id": "t07f001",
+     "name": "来源文档",
+     "style": {
+      "type": "url"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "description": "选择实际处理此问题的人，便于手动提醒和跟踪进展。",
+     "id": "t07f002",
+     "multiple": false,
+     "name": "负责人",
+     "type": "user"
+    },
+    {
+     "bidirectional": false,
+     "id": "t07f003",
+     "link_table": "t01",
+     "name": "所属项目",
+     "type": "link"
+    },
+    {
+     "id": "t07f004",
+     "name": "创建人",
+     "type": "created_by"
+    },
+    {
+     "default_value": null,
+     "id": "t07f005",
+     "name": "问题 副本 2",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t07f006",
+     "name": "问题",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t07f007",
+     "name": "计划解决日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "default_value": {
+      "$slot": "record_created_time"
+     },
+     "id": "t07f008",
+     "name": "记录日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "bidirectional": false,
+     "id": "t07f009",
+     "link_table": "t07",
+     "name": "父记录 2",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t07f010",
+     "name": "解决方案（开会录音0",
+     "style": {
+      "type": "url"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t07f011",
+     "name": "解决结果",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "id": "t07f012",
+     "name": "更新时间",
+     "style": {
+      "format": "yyyy-MM-dd HH:mm"
+     },
+     "type": "updated_at"
+    },
+    {
+     "default_value": [
+      "待确认"
+     ],
+     "id": "t07f013",
+     "multiple": false,
+     "name": "处理状态",
+     "options": [
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "待确认"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "待处理"
+      },
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "处理中"
+      },
+      {
+       "hue": "Purple",
+       "lightness": "Lighter",
+       "name": "待验收"
+      },
+      {
+       "hue": "Green",
+       "lightness": "Lighter",
+       "name": "已解决"
+      },
+      {
+       "hue": "Yellow",
+       "lightness": "Lighter",
+       "name": "暂缓"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "id": "t07f014",
+     "name": "最新进展",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "default_value": null,
+     "id": "t07f015",
+     "multiple": false,
+     "name": "优先级",
+     "options": [
+      {
+       "hue": "Red",
+       "lightness": "Lighter",
+       "name": "紧急"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "高"
+      },
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "中"
+      },
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "低"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t07f016",
+     "name": "原文编号",
+     "style": {
+      "percentage": false,
+      "precision": 0,
+      "thousands_separator": false,
+      "type": "plain"
+     },
+     "type": "number"
+    },
+    {
+     "default_value": null,
+     "id": "t07f017",
+     "name": "问题 副本",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    }
+   ],
+   "views": [
+    {
+     "name": "表格",
+     "type": "grid"
+    },
+    {
+     "name": "表格 8",
+     "type": "grid"
+    },
+    {
+     "name": "未解决问题",
+     "type": "grid"
+    },
+    {
+     "name": "按负责人",
+     "type": "grid"
+    },
+    {
+     "name": "全部问题",
+     "type": "grid"
+    },
+    {
+     "name": "已解决问题",
+     "type": "grid"
+    },
+    {
+     "name": "按日期",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "10 月13开发任务表",
+   "src_id": "t08",
+   "fields": [
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t05f008",
+     "id": "t10f007",
+     "link_table": "t05",
+     "name": "所属版本",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f004",
+     "name": "今日进度说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t01f001",
+     "id": "t10f003",
+     "link_table": "t01",
+     "name": "关联项目",
+     "type": "link"
+    },
+    {
+     "bidirectional": false,
+     "id": "t10f012",
+     "link_table": "t08",
+     "name": "父记录",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f008",
+     "name": "任务详细说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t10f001",
+     "name": "截止日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "default_value": null,
+     "id": "t10f014",
+     "name": "任务名称",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t10f006",
+     "name": "开始日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "bidirectional": false,
+     "id": "t10f005",
+     "link_table": "t08",
+     "name": "父记录 2",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f002",
+     "multiple": false,
+     "name": "任务状态",
+     "options": [
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "未开始"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "开发中"
+      },
+      {
+       "hue": "Wathet",
+       "lightness": "Lighter",
+       "name": "联调中"
+      },
+      {
+       "hue": "Yellow",
+       "lightness": "Lighter",
+       "name": "待验收"
+      },
+      {
+       "hue": "Turquoise",
+       "lightness": "Lighter",
+       "name": "已完成"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t10f013",
+     "name": "当日进度",
+     "style": {
+      "color": "Blue",
+      "percentage": true,
+      "type": "progress"
+     },
+     "type": "number"
+    },
+    {
+     "description": "上传当天写完任务后的产出文件和图片（代码截图、改动说明等），供合并代码的人查看我这边更新了什么，确保 AI 合并时没有问题。",
+     "id": "t10f009",
+     "name": "今日产出文件",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t03f006",
+     "id": "t10f010",
+     "link_table": "t03",
+     "name": "关联需求",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f011",
+     "multiple": false,
+     "name": "负责人",
+     "type": "user"
+    }
+   ],
+   "views": [
+    {
+     "name": "Grid",
+     "type": "grid"
+    },
+    {
+     "name": "未完成任务（按负责人）",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "10月12日开发任务表",
+   "src_id": "t09",
+   "fields": [
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t05f012",
+     "id": "t10f007",
+     "link_table": "t05",
+     "name": "所属版本",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f014",
+     "name": "任务名称",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t10f002",
+     "multiple": false,
+     "name": "任务状态",
+     "options": [
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "未开始"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "开发中"
+      },
+      {
+       "hue": "Wathet",
+       "lightness": "Lighter",
+       "name": "联调中"
+      },
+      {
+       "hue": "Yellow",
+       "lightness": "Lighter",
+       "name": "待验收"
+      },
+      {
+       "hue": "Turquoise",
+       "lightness": "Lighter",
+       "name": "已完成"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t10f004",
+     "name": "今日进度说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t01f015",
+     "id": "t10f003",
+     "link_table": "t01",
+     "name": "关联项目",
+     "type": "link"
+    },
+    {
+     "bidirectional": false,
+     "id": "t10f005",
+     "link_table": "t09",
+     "name": "父记录 2",
+     "type": "link"
+    },
+    {
+     "description": "上传当天写完任务后的产出文件和图片（代码截图、改动说明等），供合并代码的人查看我这边更新了什么，确保 AI 合并时没有问题。",
+     "id": "t10f009",
+     "name": "今日产出文件",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t03f010",
+     "id": "t10f010",
+     "link_table": "t03",
+     "name": "关联需求",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f011",
+     "multiple": false,
+     "name": "负责人",
+     "type": "user"
+    },
+    {
+     "default_value": null,
+     "id": "t10f013",
+     "name": "当日进度",
+     "style": {
+      "color": "Blue",
+      "percentage": true,
+      "type": "progress"
+     },
+     "type": "number"
+    },
+    {
+     "default_value": null,
+     "id": "t10f008",
+     "name": "任务详细说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t10f006",
+     "name": "开始日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "bidirectional": false,
+     "id": "t10f012",
+     "link_table": "t09",
+     "name": "父记录",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f001",
+     "name": "截止日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    }
+   ],
+   "views": [
+    {
+     "name": "Grid",
+     "type": "grid"
+    },
+    {
+     "name": "未完成任务（按负责人）",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "开发任务表 10月15日",
+   "src_id": "t10",
+   "fields": [
+    {
+     "default_value": null,
+     "id": "t10f001",
+     "name": "截止日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "default_value": null,
+     "id": "t10f002",
+     "multiple": false,
+     "name": "任务状态",
+     "options": [
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "未开始"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "开发中"
+      },
+      {
+       "hue": "Wathet",
+       "lightness": "Lighter",
+       "name": "联调中"
+      },
+      {
+       "hue": "Yellow",
+       "lightness": "Lighter",
+       "name": "待验收"
+      },
+      {
+       "hue": "Turquoise",
+       "lightness": "Lighter",
+       "name": "已完成"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t01f014",
+     "id": "t10f003",
+     "link_table": "t01",
+     "name": "关联项目",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f004",
+     "name": "今日进度说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": false,
+     "id": "t10f005",
+     "link_table": "t10",
+     "name": "父记录 2",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f006",
+     "name": "开始日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t05f010",
+     "id": "t10f007",
+     "link_table": "t05",
+     "name": "所属版本",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f008",
+     "name": "任务详细说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "description": "上传当天写完任务后的产出文件和图片（代码截图、改动说明等），供合并代码的人查看我这边更新了什么，确保 AI 合并时没有问题。",
+     "id": "t10f009",
+     "name": "今日产出文件",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t03f001",
+     "id": "t10f010",
+     "link_table": "t03",
+     "name": "关联需求",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f011",
+     "multiple": false,
+     "name": "负责人",
+     "type": "user"
+    },
+    {
+     "bidirectional": false,
+     "id": "t10f012",
+     "link_table": "t10",
+     "name": "父记录",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t10f013",
+     "name": "当日进度",
+     "style": {
+      "color": "Blue",
+      "percentage": true,
+      "type": "progress"
+     },
+     "type": "number"
+    },
+    {
+     "default_value": null,
+     "id": "t10f014",
+     "name": "任务名称",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    }
+   ],
+   "views": [
+    {
+     "name": "Grid",
+     "type": "grid"
+    },
+    {
+     "name": "未完成任务（按负责人）",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "1.0功能验收表",
+   "src_id": "t11",
+   "fields": [
+    {
+     "default_value": null,
+     "description": "保留原开发任务说明，作为验收范围参考；内容不自动代表验收已通过。",
+     "id": "t11f001",
+     "name": "原任务说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": false,
+     "id": "t11f002",
+     "link_table": "t02",
+     "name": "关联开发任务",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "description": "整理时的源任务状态快照，不代表验收结论。",
+     "id": "t11f003",
+     "name": "原任务状态",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": "1.0",
+     "id": "t11f004",
+     "name": "版本",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t11f005",
+     "name": "验收项",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t11f006",
+     "multiple": false,
+     "name": "验收人",
+     "type": "user"
+    },
+    {
+     "id": "t11f007",
+     "name": "验收证据",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "default_value": null,
+     "id": "t11f008",
+     "name": "验收日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "default_value": [
+      "待验收"
+     ],
+     "description": "手动验收结论。只有实际验收通过才选勾；未验收不等于未通过。",
+     "id": "t11f009",
+     "multiple": false,
+     "name": "验收结果",
+     "options": [
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "待验收"
+      },
+      {
+       "hue": "Green",
+       "lightness": "Lighter",
+       "name": "✓ 通过"
+      },
+      {
+       "hue": "Red",
+       "lightness": "Lighter",
+       "name": "✗ 未通过"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "暂缓验收"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t12f006",
+     "id": "t11f010",
+     "link_table": "t12",
+     "name": "发现的问题",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t11f011",
+     "name": "所属功能",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "description": "填写实际测试结果、未通过原因或需复验的内容。",
+     "id": "t11f012",
+     "name": "验收说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    }
+   ],
+   "views": [
+    {
+     "name": "表格",
+     "type": "grid"
+    },
+    {
+     "name": "功能验收",
+     "type": "grid"
+    },
+    {
+     "name": "✗ 未通过",
+     "type": "grid"
+    },
+    {
+     "name": "待验收",
+     "type": "grid"
+    },
+    {
+     "name": "✓ 已通过",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "1.0版本问题总结表",
+   "src_id": "t12",
+   "fields": [
+    {
+     "default_value": [
+      "待确认"
+     ],
+     "id": "t12f001",
+     "multiple": false,
+     "name": "处理状态",
+     "options": [
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "待确认"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "待处理"
+      },
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "处理中"
+      },
+      {
+       "hue": "Purple",
+       "lightness": "Lighter",
+       "name": "待复验"
+      },
+      {
+       "hue": "Green",
+       "lightness": "Lighter",
+       "name": "已关闭"
+      },
+      {
+       "hue": "Yellow",
+       "lightness": "Lighter",
+       "name": "暂缓"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "description": "可直接输入功能名称。",
+     "id": "t12f002",
+     "name": "所属功能",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t12f003",
+     "name": "复现与影响",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t12f004",
+     "multiple": false,
+     "name": "严重程度",
+     "options": [
+      {
+       "hue": "Red",
+       "lightness": "Lighter",
+       "name": "阻塞"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "严重"
+      },
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "一般"
+      },
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "建议"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t12f005",
+     "name": "问题",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": true,
+     "bidirectional_link_field_id": "t11f010",
+     "id": "t12f006",
+     "link_table": "t11",
+     "name": "关联验收项",
+     "type": "link"
+    },
+    {
+     "default_value": null,
+     "id": "t12f007",
+     "name": "计划解决日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "default_value": [
+      "待复验"
+     ],
+     "id": "t12f008",
+     "multiple": false,
+     "name": "复验结果",
+     "options": [
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "待复验"
+      },
+      {
+       "hue": "Green",
+       "lightness": "Lighter",
+       "name": "✓ 通过"
+      },
+      {
+       "hue": "Red",
+       "lightness": "Lighter",
+       "name": "✗ 未通过"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "id": "t12f009",
+     "name": "问题快照",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "default_value": null,
+     "id": "t12f010",
+     "name": "修复说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t12f011",
+     "multiple": false,
+     "name": "负责人",
+     "type": "user"
+    },
+    {
+     "bidirectional": false,
+     "id": "t12f012",
+     "link_table": "t04",
+     "name": "原问题记录",
+     "type": "link"
+    },
+    {
+     "default_value": "1.0",
+     "id": "t12f013",
+     "name": "版本",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    }
+   ],
+   "views": [
+    {
+     "name": "表格",
+     "type": "grid"
+    },
+    {
+     "name": "未关闭问题",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  },
+  {
+   "name": "灵猫企管1.0功能清单",
+   "src_id": "t13",
+   "fields": [
+    {
+     "default_value": null,
+     "id": "t13f001",
+     "name": "验收顺序",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "id": "t13f002",
+     "name": "验收证据",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "default_value": null,
+     "id": "t13f003",
+     "multiple": false,
+     "name": "验收人",
+     "type": "user"
+    },
+    {
+     "default_value": null,
+     "id": "t13f004",
+     "name": "1.0问题现状",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t13f005",
+     "name": "原功能名称",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": "1.0",
+     "id": "t13f006",
+     "name": "版本",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t13f007",
+     "name": "问题说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t13f008",
+     "name": "功能名称",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "id": "t13f009",
+     "name": "问题快照",
+     "style": {
+      "type": "plain"
+     },
+     "type": "attachment"
+    },
+    {
+     "default_value": null,
+     "id": "t13f010",
+     "name": "验收日期",
+     "style": {
+      "format": "yyyy-MM-dd"
+     },
+     "type": "datetime"
+    },
+    {
+     "default_value": null,
+     "id": "t13f011",
+     "name": "验收说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": [
+      "待验收"
+     ],
+     "id": "t13f012",
+     "multiple": false,
+     "name": "验收结果",
+     "options": [
+      {
+       "hue": "Gray",
+       "lightness": "Lighter",
+       "name": "待验收"
+      },
+      {
+       "hue": "Green",
+       "lightness": "Lighter",
+       "name": "✓ 通过"
+      },
+      {
+       "hue": "Red",
+       "lightness": "Lighter",
+       "name": "✗ 未通过"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "暂缓验收"
+      }
+     ],
+     "type": "select"
+    },
+    {
+     "default_value": null,
+     "id": "t13f013",
+     "name": "2.0规划",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t13f014",
+     "name": "验收批次",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "bidirectional": false,
+     "id": "t13f015",
+     "link_table": "t12",
+     "name": "关联问题",
+     "type": "link"
+    },
+    {
+     "default_value": "用户提供《灵猫企管1.0产品功能图》；2026-10-17盘点，版本6d5997c7。功能图仅表示产品组成，完成情况以验收结果为准。",
+     "id": "t13f016",
+     "name": "来源说明",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t13f017",
+     "name": "功能编号",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t13f018",
+     "name": "所属模块",
+     "style": {
+      "type": "plain"
+     },
+     "type": "text"
+    },
+    {
+     "default_value": null,
+     "id": "t13f019",
+     "multiple": false,
+     "name": "所属分区",
+     "options": [
+      {
+       "hue": "Blue",
+       "lightness": "Lighter",
+       "name": "前台应用"
+      },
+      {
+       "hue": "Green",
+       "lightness": "Lighter",
+       "name": "共用业务"
+      },
+      {
+       "hue": "Purple",
+       "lightness": "Lighter",
+       "name": "后台管理"
+      },
+      {
+       "hue": "Orange",
+       "lightness": "Lighter",
+       "name": "AI与数据支撑"
+      }
+     ],
+     "type": "select"
+    }
+   ],
+   "views": [
+    {
+     "name": "完整功能明细（研发参考）",
+     "type": "grid"
+    },
+    {
+     "name": "业务验收 · 26个场景",
+     "type": "grid"
+    }
+   ],
+   "errs": {
+    "fields": null,
+    "views": null
+   }
+  }
+ ]
+}
